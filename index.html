@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>New Game</title>
+  <meta charset="UTF-8"> <!--definimos la codificación de la página-->
+  <meta name="Description" CONTENT="Author: Juan Carlos Ureña Fandos, Category: Games"> <!--descripción de la página para el buscador-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' media='screen and (min-width: 1081px)' href='css/css.css'>
+  <link rel='stylesheet' media='screen and (max-width: 1080px)' href='css/css.css'>
+  <script src="js/js.js"></script>
+
+<style>
+canvas {
+    border:1px solid #AAAAAA;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+
+<body onload="startGame()">
+
+  <div style="text-align:center;width:480px;">
+    <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
+    <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+    <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
+    <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+  </div>
+
+</body>
+</html>
