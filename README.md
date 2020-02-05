@@ -7,6 +7,7 @@ Este proyecto tiene las siguientes metas:
 - Crear canvas
 - Crear inputs 
 - Utilizar una imagen para el personaje
+- Añadir mapa fullscreen al canvas
 
 ## 2- Funcionalidades:
 
