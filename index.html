@@ -13,20 +13,28 @@
 
 <style>
 canvas {
-    border:1px solid #AAAAAA;
-    background-color: #f1f1f1;
+
+    background-image: url('img/map.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+html, body, div, canvas {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 </style>
+
+<embed src="music/den.mp3" autostart="true" loop="true"
+width="2" height="0">
+</embed>
+
 </head>
 
 <body onload="startGame()">
-
-  <div style="text-align:center;width:480px;">
-    <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
-    <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
-    <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
-    <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
-  </div>
 
 </body>
 </html>
