@@ -4,10 +4,10 @@ Este proyecto tiene las siguientes metas:
 
 ## 1- Base:
 
-- Crear canvas
-- Crear inputs (version teclado)
+- Crear canvas fullscreen
+- Crear inputs (version teclado) para mover al personaje
 - Utilizar una imagen para el personaje
-- Añadir mapa fullscreen al canvas
+- Añadir imagen al canvas
 
 ## 2- Funcionalidades:
 
