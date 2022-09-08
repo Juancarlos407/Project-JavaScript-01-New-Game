@@ -1,4 +1,4 @@
-# Project RPG 01 New Game v1.0
+# Project JavaScript 01 New Game v1.0
 
 Este proyecto tiene las siguientes metas:
 
