@@ -1,40 +1,110 @@
-<!DOCTYPE html>
-<html>
 
-<head>
 
-  <title>New Game</title>
-  <meta charset="UTF-8"> <!--definimos la codificación de la página-->
-  <meta name="Description" CONTENT="Author: Juan Carlos Ureña Fandos, Category: Games"> <!--descripción de la página para el buscador-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' media='screen and (min-width: 1081px)' href='css/css.css'>
-  <link rel='stylesheet' media='screen and (max-width: 1080px)' href='css/css.css'>
-  <script src="js/js.js"></script>
+<canvas width="720" height="405"></canvas>
 
 <style>
 canvas {
-
-    background-image: url('img/map.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  border: 1px solid black;
+  background-image: url('img/map1.png');
 }
-
-html, body, div, canvas {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 </style>
 
-<embed src="music/den.mp3" autostart="true" loop="true"
-width="2" height="0">
-</embed>
+<script>
+  const SCALE = 2;
+  const WIDTH = 16;
+  const HEIGHT = 18;
+  const SCALED_WIDTH = SCALE * WIDTH;
+  const SCALED_HEIGHT = SCALE * HEIGHT;
+  const CYCLE_LOOP = [0, 1, 0, 2];
+  const FACING_DOWN = 0;
+  const FACING_UP = 1;
+  const FACING_LEFT = 2;
+  const FACING_RIGHT = 3;
+  const FRAME_LIMIT = 12;
+  const MOVEMENT_SPEED = 1;
 
-</head>
+  let canvas = document.querySelector('canvas');
+  let ctx = canvas.getContext('2d');
+  let keyPresses = {};
+  let currentDirection = FACING_LEFT;
+  let currentLoopIndex = 0;
+  let frameCount = 0;
+  let positionX = 320;
+  let positionY = 150;
+  let img = new Image();
 
-<body onload="startGame()">
+  window.addEventListener('keydown', keyDownListener);
+  function keyDownListener(event) {
+      keyPresses[event.key] = true;
+  }
 
-</body>
-</html>
+  window.addEventListener('keyup', keyUpListener);
+  function keyUpListener(event) {
+      keyPresses[event.key] = false;
+  }
+
+  function loadImage() {
+    img.src = "img/pj1.png";
+    img.onload = function() {
+      window.requestAnimationFrame(gameLoop);
+    };
+  }
+
+  function drawFrame(frameX, frameY, canvasX, canvasY) {
+    ctx.drawImage(img,
+                  frameX * WIDTH, frameY * HEIGHT, WIDTH, HEIGHT,
+                  canvasX, canvasY, SCALED_WIDTH, SCALED_HEIGHT);
+  }
+
+  loadImage();
+
+  function gameLoop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let hasMoved = false;
+
+    if (keyPresses.w) {
+      moveCharacter(0, -MOVEMENT_SPEED, FACING_UP);
+      hasMoved = true;
+    } else if (keyPresses.s) {
+      moveCharacter(0, MOVEMENT_SPEED, FACING_DOWN);
+      hasMoved = true;
+    }
+
+    if (keyPresses.a) {
+      moveCharacter(-MOVEMENT_SPEED, 0, FACING_LEFT);
+      hasMoved = true;
+    } else if (keyPresses.d) {
+      moveCharacter(MOVEMENT_SPEED, 0, FACING_RIGHT);
+      hasMoved = true;
+    }
+
+    if (hasMoved) {
+      frameCount++;
+      if (frameCount >= FRAME_LIMIT) {
+        frameCount = 0;
+        currentLoopIndex++;
+        if (currentLoopIndex >= CYCLE_LOOP.length) {
+          currentLoopIndex = 0;
+        }
+      }
+    }
+
+    if (!hasMoved) {
+      currentLoopIndex = 0;
+    }
+
+    drawFrame(CYCLE_LOOP[currentLoopIndex], currentDirection, positionX, positionY);
+    window.requestAnimationFrame(gameLoop);
+  }
+
+  function moveCharacter(deltaX, deltaY, direction) {
+    if (positionX + deltaX > 0 && positionX + SCALED_WIDTH + deltaX < canvas.width) {
+      positionX += deltaX;
+    }
+    if (positionY + deltaY > 0 && positionY + SCALED_HEIGHT + deltaY < canvas.height) {
+      positionY += deltaY;
+    }
+    currentDirection = direction;
+  }
+</script>
