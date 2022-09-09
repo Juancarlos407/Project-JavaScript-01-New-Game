@@ -1,10 +1,9 @@
-# Project JavaScript 01 New Game v1.0
+# Project WASD movement + sprite change
 
 ## Done:
 
-- Crear canvas fullscreen
-- Crear inputs (version teclado) para mover al personaje
-- Utilizar una imagen para el personaje
+- Crear inputs (version teclado WASD) para mover al personaje
+- Utilizar un SPRITE para el personaje en movimiento
 - Añadir imagen al canvas
 
 ## To Do:
