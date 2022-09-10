@@ -1,4 +1,4 @@
-# Project
+# Project-JavaScript-01-New-Game
 
 ## To Do:
 
