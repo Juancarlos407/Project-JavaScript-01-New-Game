@@ -1,9 +1,7 @@
-# Project WASD movement + sprite change
+# Project
 
 ## To Do:
 
-- Estructurar código (separar .js .css de .html)
-- Comentar código
 - Añadir animaciones al pj
 - Añadir menú de ayuda (pj)
 - Añadir menú de selección de pj
@@ -23,3 +21,5 @@
 - Añadir imagen al canvas
 - Crear inputs (version teclado WASD) para mover al personaje
 - Utilizar un SPRITE para el personaje en movimiento
+- Estructurar código (separar .js .css de .html)
+- Comentar código
