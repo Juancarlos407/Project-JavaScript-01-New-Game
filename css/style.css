@@ -1,3 +1,156 @@
-body {
+body { /* estilo principal */
   background-color: black;
 }
+canvas {
+  background-image: url('../img/map.png');
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.selection{ /* estilo menú selección de personaje */
+  text-align:center;
+    background-image:url("../img/selectionscreen.png");
+    font-family: arial;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    overflow: hidden;
+    margin: auto;
+    width: 720px;
+    height: 395px;
+    border: 3px solid green;
+    padding: 10px;
+}
+.help{ /* estilo menú help */
+  margin: auto;
+  width: 720px;
+  height: 395px;
+  border: 3px solid green;
+  padding: 10px;
+    font-family: arial;
+    color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.about{ /* estilo menú help */
+  margin: auto;
+  width: 720px;
+  height: 395px;
+  border: 3px solid green;
+  padding: 10px;
+    font-family: arial;
+    color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+    overflow: hidden;
+}
+  .button { /* estilo botón de personaje */
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 35px;
+      font-family: Verdana;
+      font-size:17px;
+      color: white;
+      border-radius:6px;
+      width: 100px;
+      height:200px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-image:url("../img/robotron.png"); /* imagen ficha de pj */
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 3px #999;
+    }
+    .button:hover { /* pasar sobre el botón */
+      background-color: #3e8e41
+    }
+    .button:active { /* pulsar el botón */
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    .button2 { /* estilo botón de personaje 2 */
+      margin-right: 5px;
+      margin-left: 5px;
+        margin-bottom: 35px;
+        font-family: Verdana;
+        font-size:17px;
+        color: white;
+        border-radius:6px;
+        width: 100px;
+        height:200px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-image:url("../img/tronrobo.png");
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 3px #999;
+      }
+      .button2:hover {
+        background-color: #3e8e41
+      }
+      .button2:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      .button4 { /* estilo botón de personaje 3 */
+        margin-right: 5px;
+        margin-left: 5px;
+          margin-bottom: 35px;
+          font-family: Verdana;
+          font-size:17px;
+          color: white;
+          border-radius:6px;
+          width: 100px;
+          height:200px;
+          text-align: center;
+          cursor: pointer;
+          outline: none;
+          color: #fff;
+          background-image:url("../img/magic.png");
+          border: none;
+          border-radius: 15px;
+          box-shadow: 0 3px #999;
+        }
+        .button4:hover {
+          background-color: #3e8e41
+        }
+        .button4:active {
+          background-color: #3e8e41;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+        }
+      .button3 { /* estilo botón del menú principal */
+          margin-left: 0px;
+          margin-bottom: 35px;
+          font-family: Verdana;
+          font-size:17px;
+          color: white;
+          border-radius:6px;
+          width: 700px;
+          height:200px;
+          text-align: center;
+          cursor: pointer;
+          outline: none;
+          color: #fff;
+          background-image:url("../img/map.png");
+          border: none;
+          border-radius: 15px;
+          box-shadow: 0 3px #999;
+        }
+        .button3:hover {
+          background-color: #3e8e41
+        }
+        .button3:active {
+          background-color: #3e8e41;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+        }

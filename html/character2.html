@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>STELIOX GAME</title>
+  <meta charset="UTF-8"> <!--definimos la codificación de la página-->
+  <meta name="Description" CONTENT="Author: Juan Carlos Ureña Fandos, Category: Games"> <!--descripción de la página para el buscador-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--inicializamos la escala-->
+  <link rel='stylesheet' media='screen and (min-width: 1081px)' href='../css/style.css'> <!--elegimos el estilo según tamaño de pantalla-->
+  <link rel='stylesheet' media='screen and (max-width: 1080px)' href='../css/style.css'> <!--elegimos el estilo según tamaño de pantalla-->
+</head>
+
+<body>
+
+<embed src="../audio/den.mp3" autostart="true" loop="true" width="2" height="0"></embed> <!--añadimos audio en loop, versiones de navegador deniegan el autostart-->
+
+<canvas width="720" height="395"></canvas> <!--creamos el canvas-->
+<style>
+canvas {
+  background-image: url('../img/map.png');
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+</style> <!--damos estilo al canvas-->
+
+<script src="../js/character2.js"></script> <!--ejecutamos el script-->
+
+</body>
+
+</html>
